@@ -12,7 +12,7 @@ public class ProductSearchPages extends BasePages{
     @FindBy(xpath = "//input[contains(@name ,'Цена от')]")
     WebElement startPrice;
 
-    @FindBy(xpath = "//fieldset[contains(@class ,'_3M70uokkTS')]//*[@class = '_2y67xS5HuR']")
+    @FindBy(xpath = "//div[contains(@id , 'search-prepack')]")
     WebElement maker;
 
     @FindBy(xpath = "//button[contains(@class ,'vLDMfabyVq')]")
@@ -28,7 +28,7 @@ public class ProductSearchPages extends BasePages{
     }
 
     public void  selectMaker(String menuItem) throws InterruptedException {
-        maker.findElement(By.xpath(".//*[@name ='"+menuItem+"']")).click();
+        maker.findElement(By.xpath(".//*[text()='"+menuItem+"']")).click();
         Thread.sleep(1000);
     }
 }

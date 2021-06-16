@@ -13,10 +13,10 @@ public class MainPages extends BasePages {
     @FindBy(xpath = "//a[contains(@class , 'new__item_search_yes')]")
     WebElement market;
 
-    @FindBy(xpath = "//a[contains(@class , '_3Lwc_UVFq4')]")
+    @FindBy(xpath = "//div[contains(@data-apiary-widget-name , '@MarketNode/HeaderTabs')]")
     WebElement catalog;
 
-    @FindBy(xpath = "//ul[@class = '_1Y6X2G3jjK']")
+    @FindBy(xpath = "//div[contains(@data-apiary-widget-name , '@MarketNode/NavigationTree')]")
     WebElement razdel;
 
     public MainPages(WebDriver driver){

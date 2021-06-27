@@ -14,4 +14,13 @@ public class ProductSearchStep {
     public void stepSelectMaker(String menuItem) throws InterruptedException {
         new ProductSearchPages(BaseStep.getDriver()).selectMaker(menuItem);
     }
+    @Step("Ввели в поисковую строку первый элемент")
+    public void stepRemember() throws InterruptedException {
+       new ProductSearchPages(BaseStep.getDriver()).remember();
+    }
+
+    @Step("Проверяем что наименование товара соответствует запомненному значению")
+    public void stepContrast() throws InterruptedException {
+        new ProductSearchPages(BaseStep.getDriver()).contrast();
+    }
 }

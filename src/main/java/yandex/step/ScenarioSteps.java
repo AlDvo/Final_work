@@ -32,4 +32,15 @@ public class ScenarioSteps {
     public void stepSelectMaker(String menuItem) throws InterruptedException {
         productSearchStep.stepSelectMaker(menuItem);
     }
+
+    @When("^В поисковую строку ввести первый элемент списка$")
+    public void stepRemember() throws InterruptedException {
+        productSearchStep.stepRemember();
+    }
+
+    @When("^наименование товара соответствует запомненному значению$")
+    public void stepContrast() throws InterruptedException {
+        productSearchStep.stepContrast();
+    }
+
 }
